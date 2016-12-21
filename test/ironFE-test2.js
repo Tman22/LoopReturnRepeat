@@ -8,26 +8,35 @@ describe('IronFE', function() {
     let obj = { kale: 12, apple: 5 };
     let array = ['kale', 'apple'];
 
-    let answer = ['12 and kale','5 and apple']
+    let answer = ['12 and kale','5 and apple'];
 
     assert.deepEqual(displayThis(obj, array), answer);
   });
 
   it('should add new item', function() {
-    let obj = { kale: 12, apple: 5 }
+    let obj = { kale: 12, apple: 5 };
 
-    let answer = { kale: 12, apple: 5, avocado: 4  }
+    let answer = { kale: 12, apple: 5, avocado: 4  };
 
     assert.deepEqual(addNewItem(obj, {avocado: 4}), answer);
     assert.deepEqual(obj, answer);
   });
 
+  it.skip('should make an array of objs', function() {
+    let obj = { kale: 12, apple: 5, orange: 1 };
+
+    let answer = [{ kale: 12 }, { apple: 5 }, { orange: 1 }];
+
+    assert.deepEqual(makeArrayObjs(obj), answer);
+    assert.deepEqual(obj, answer);
+  });
+
   it('should add items to apple', function() {
     let obj = { kale: 12, apple: 5, orange: 8, garlic: 130,
-                  banana: 8, avocado: 44 }
+                  banana: 8, avocado: 44 };
 
     let answer = { kale: 12, apple: 9, orange: 8, garlic: 130,
-                  banana: 8, avocado: 44 }
+                  banana: 8, avocado: 44 };
     assert.deepEqual(addItems(obj, 'apple', 4), answer);
   });
 
@@ -57,10 +66,12 @@ describe('IronFE', function() {
   });
 
   it('should add both objects together using forEach', function() {
+    var key = 'apple'
     let og = { kale: 12, apple: 5, orange: 8, garlic: 130,
-                  banana: 8, avocado: 44 };
+                  banana: 8, avocado: 4 };
     let add = { kale:2, apple: 1, orange: 3, garlic: 4,
                   banana: 2, avocado: 3 };
+                var tim =  { [key]: 3 }
 
     let answer = { kale: 14, apple: 6, orange: 11, garlic: 134,
                   banana: 10, avocado: 47 };
