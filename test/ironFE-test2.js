@@ -66,15 +66,13 @@ describe('IronFE', function() {
   });
 
   it('should add both objects together using forEach', function() {
-    var key = 'apple'
     let og = { kale: 12, apple: 5, orange: 8, garlic: 130,
                   banana: 8, avocado: 4 };
     let add = { kale:2, apple: 1, orange: 3, garlic: 4,
                   banana: 2, avocado: 3 };
-                var tim =  { [key]: 3 }
 
     let answer = { kale: 14, apple: 6, orange: 11, garlic: 134,
-                  banana: 10, avocado: 47 };
+                  banana: 10, avocado: 7 };
 
     assert.deepEqual(addList(og, add), answer);
     assert.deepEqual(og, answer);
@@ -105,9 +103,8 @@ describe('IronFE', function() {
   it('should find the total of each category' , function() {
     let list = { kale: {dino: 1, baby: 5 }, apple: { honeycrisp: 1, fuji: 5 },
     lettuce: { romaine: 2, iceburg: 2  }, avocado: 3 };
-    // what happens when some data is flattened already?
-    // what does Object.keys(obj[item]) return?
     let answer = { kale: 6, apple: 6, lettuce: 4, avocado: 3 }
+
     assert.deepEqual(totalBunch(list), answer);
     assert.deepEqual(list, answer);
   });

@@ -25,7 +25,7 @@ describe('IronFE', function() {
     assert.equal(indexStuff(130, array), 3);
   });
 
-  it.skip('should reverse string using forEach', function() {
+  it('should reverse string using forEach', function() {
     assert.equal(reverseString('hello'), 'olleh');
   });
 
