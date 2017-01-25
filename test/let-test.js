@@ -7,8 +7,8 @@ describe('Scoping problem let ', function() {
     assert(letFun1);
   });
 
-  it.skip('should find return 2', function() {
-    assert.equal(letFun1.first(), 2);
+  it.skip('should return y with a value of 6', function() {
+    assert.equal(letFun1.first(true, 5), 6);
   });
 
   it.skip('should return array with 10 in it', function() {
